@@ -1,3 +1,6 @@
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://github.com/senbon/dockerfiles/blob/master/LICENSE
+
 ===========
 dockerfiles
 ===========
@@ -68,7 +71,7 @@ Dockerfiles. Below is an example of one such user-level Dockerfile containing
 
 .. code-block:: bash
 
-  FROM aleksaro/python3-theano-tf:7.5-cudnn4
+  FROM aleksaro/python3-theano-tf:7.5-cudnn5
 
   # Install Keras
   RUN pip3 install \
@@ -98,7 +101,7 @@ their GitHub page for a slew of general Dockerfiles.
 .. _Docker: https://www.docker.com/
 .. _Docker Docs: https://docs.docker.com/
 .. _NVIDIA Docker wiki: https://github.com/NVIDIA/nvidia-docker/wiki
-.. _shared volumes: https://docs.docker.com/engine/userguide/containers/dockervolumes/
+.. _shared volumes: https://docs.docker.com/engine/tutorials/dockervolumes/
 .. _Keras: https://github.com/fchollet/keras
 .. _Lasagne: https://github.com/Lasagne/Lasagne
 .. _Kaixhin: https://github.com/Kaixhin/dockerfiles

@@ -1,6 +1,6 @@
 # python2-base
 
-This Dockerfile uses the following base image ``aleksaro/cuda-base:7.5-cudnn4``.
+This Dockerfile uses the following base image ``aleksaro/cuda-base:7.5-cudnn5``.
 
 Below is a listing of the programs, libraries, and compilers are included in this Dockerfile:
 
@@ -13,6 +13,7 @@ Below is a listing of the programs, libraries, and compilers are included in thi
 | python-dev                                                    | Header files and a static library for Python 2    |
 | [python-pip](http://www.pip-installer.org/)                   | Python package installer for Python 2             |
 | [python-setuptools](https://pypi.python.org/pypi/setuptools)  | Extension to the python-distutils                 |
+| [python-tk](https://wiki.python.org/moin/TkInter)             | Graphical User Interface toolkit for Python       |
 |                                                               |                                                   |
 | [libfreetype6-dev](https://www.freetype.org/)                 | FreeType 2 font engine                            |
 | libjpeg8-dev                                                  | Independent JPEG Group's JPEG runtime library     |

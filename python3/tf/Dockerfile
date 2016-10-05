@@ -4,20 +4,19 @@
 #
 
 # Base image is python-ml
-FROM aleksaro/python3-ml:7.5-cudnn4
+FROM aleksaro/python3-ml:7.5-cudnn5
 
 
 MAINTAINER Aleksander Rognhaugen
 
 
 # Specify TensorFlow version
-ARG TF_VERSION=0.9.0rc0
+ARG TF_VERSION=0.11.0rc0
 
 
 # Install TensorFlow
 RUN pip3 install --upgrade \
     https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-${TF_VERSION}-cp34-cp34m-linux_x86_64.whl
-
 
 # At the time when this Dockerfile was made Tensorflow tries to open libcuda.so
 # instead of libcuda.so.1 which means we have to set up the following symbolic

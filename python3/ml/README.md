@@ -1,6 +1,6 @@
 # python3-ml
 
-This Dockerfile uses the following base image ``aleksaro/python3-base:7.5-cudnn4``.
+This Dockerfile uses the following base image ``aleksaro/python3-base:7.5-cudnn5``.
 
 Below is a listing of the libraries included in this Dockerfile:
 

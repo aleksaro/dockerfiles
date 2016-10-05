@@ -1,6 +1,6 @@
 # python3-theano
 
-This Dockerfile uses the following base image ``aleksaro/python3-ml:7.5-cudnn4``.
+This Dockerfile uses the following base image ``aleksaro/python3-ml:7.5-cudnn5``.
 
 | Content                                    | Description                                                                      |
 |--------------------------------------------|----------------------------------------------------------------------------------|

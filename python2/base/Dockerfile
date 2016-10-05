@@ -5,7 +5,7 @@
 #
 
 # Base image is cuda-base
-FROM aleksaro/cuda-base:7.5-cudnn4
+FROM aleksaro/cuda-base:7.5-cudnn5
 
 
 MAINTAINER Aleksander Rognhaugen
@@ -19,7 +19,8 @@ RUN apt-get update && apt-get install -y \
     python \
     python-dev \
     python-pip \
-    python-setuptools
+    python-setuptools \
+    python-tk
 
 
 # Install Pillow (PIL) dependencies
