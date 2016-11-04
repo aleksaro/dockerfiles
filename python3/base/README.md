@@ -1,6 +1,6 @@
 # python3-base
 
-This Dockerfile uses the following base image ``aleksaro/cuda-base:7.5-cudnn5``.
+This Dockerfile uses the following base image ``aleksaro/cuda-base:8.0-cudnn5``.
 
 Below is a listing of the programs, libraries, and compilers are included in this Dockerfile:
 

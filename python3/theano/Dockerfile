@@ -4,7 +4,7 @@
 #
 
 # Base image is python-ml
-FROM aleksaro/python3-ml:7.5-cudnn5
+FROM aleksaro/python3-ml:8.0-cudnn5
 
 
 MAINTAINER Aleksander Rognhaugen

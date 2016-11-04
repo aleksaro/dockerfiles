@@ -4,7 +4,7 @@
 #
 
 # Base image is python-base
-FROM aleksaro/python3-base:7.5-cudnn5
+FROM aleksaro/python3-base:8.0-cudnn5
 
 
 MAINTAINER Aleksander Rognhaugen

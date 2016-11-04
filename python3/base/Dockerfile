@@ -5,7 +5,7 @@
 #
 
 # Base image is cuda-base
-FROM aleksaro/cuda-base:7.5-cudnn5
+FROM aleksaro/cuda-base:8.0-cudnn5
 
 
 MAINTAINER Aleksander Rognhaugen

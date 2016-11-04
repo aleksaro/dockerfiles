@@ -71,7 +71,7 @@ Dockerfiles. Below is an example of one such user-level Dockerfile containing
 
 .. code-block:: bash
 
-  FROM aleksaro/python3-theano-tf:7.5-cudnn5
+  FROM aleksaro/python3-theano-tf:8.0-cudnn5
 
   # Install Keras
   RUN pip3 install \
@@ -85,6 +85,9 @@ Dockerfiles. Below is an example of one such user-level Dockerfile containing
   CMD ["/bin/bash"]
 
 Depending on the situation, it may be appropriate to build these locally.
+
+Take a look at `senbon/user-dockerfiles`_ for more details on how to create
+user-level Dockerfiles.
 
 
 Acknowledgements
@@ -104,4 +107,5 @@ their GitHub page for a slew of general Dockerfiles.
 .. _shared volumes: https://docs.docker.com/engine/tutorials/dockervolumes/
 .. _Keras: https://github.com/fchollet/keras
 .. _Lasagne: https://github.com/Lasagne/Lasagne
+.. _senbon/user-dockerfiles: https://github.com/senbon/user-dockerfiles
 .. _Kaixhin: https://github.com/Kaixhin/dockerfiles

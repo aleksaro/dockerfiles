@@ -3,7 +3,7 @@
 #
 
 # Base image is CUDA + cuDNN from nvidia-docker
-FROM nvidia/cuda:7.5-cudnn5-devel
+FROM nvidia/cuda:8.0-cudnn5-devel
 
 
 MAINTAINER Aleksander Rognhaugen
