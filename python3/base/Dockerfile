@@ -5,14 +5,14 @@
 #
 
 # Base image is cuda-base
-FROM aleksaro/cuda-base:8.0-cudnn5
+FROM aleksaro/cuda-base:8.0-cudnn5-ubuntu16.04
 
 
-MAINTAINER Aleksander Rognhaugen
+LABEL maintainer "Aleksander Rognhaugen"
 
 
 # Install basic packages and miscellaneous dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     liblapack-dev \
     libopenblas-dev \
     libzmq3-dev \
@@ -22,12 +22,13 @@ RUN apt-get update && apt-get install -y \
     python3-setuptools \
     python3-tk
 
+
 # Install Pillow (PIL) dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libfreetype6-dev \
-    libjpeg8-dev \
+    libjpeg-dev \
     liblcms2-dev \
-    libopenjpeg2 \
+    libopenjpeg-dev \
     libpng12-dev \
     libtiff5-dev \
     libwebp-dev \

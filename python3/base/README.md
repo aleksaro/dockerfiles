@@ -1,6 +1,6 @@
 # python3-base
 
-This Dockerfile uses the following base image ``aleksaro/cuda-base:8.0-cudnn5``.
+This Dockerfile uses the following base image ``aleksaro/cuda-base:8.0-cudnn5-ubuntu16.04``.
 
 Below is a listing of the programs, libraries, and compilers are included in this Dockerfile:
 
@@ -16,9 +16,9 @@ Below is a listing of the programs, libraries, and compilers are included in thi
 | [python3-tk](https://wiki.python.org/moin/TkInter)            | Graphical User Interface toolkit for Python       |
 |                                                               |                                                   |
 | [libfreetype6-dev](https://www.freetype.org/)                 | FreeType 2 font engine                            |
-| libjpeg8-dev                                                  | Independent JPEG Group's JPEG runtime library     |
+| libjpeg-dev                                                   | Independent JPEG Group's JPEG runtime library     |
 | liblcms2-dev                                                  | A colour management library                       |
-| libopenjpeg2                                                  | JPEG 2000 image compression/decompression library |
+| libopenjpeg-dev                                               | JPEG 2000 image compression/decompression library |
 | libpng12-dev                                                  | Portable Network Graphics (PNG) library           |
 | libtiff5-dev                                                  | Tag Image File Format (TIFF) library              |
 | libwebp-dev                                                   | WebP format library (based on the VP8 codec)      |

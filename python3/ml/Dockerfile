@@ -4,14 +4,14 @@
 #
 
 # Base image is python-base
-FROM aleksaro/python3-base:8.0-cudnn5
+FROM aleksaro/python3-base:8.0-cudnn5-ubuntu16.04
 
 
-MAINTAINER Aleksander Rognhaugen
+LABEL maintainer "Aleksander Rognhaugen"
 
 
 # Install development files for HDF5
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libhdf5-dev
 
 

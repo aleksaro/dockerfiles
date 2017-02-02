@@ -1,13 +1,22 @@
 #
-# python3-theano: Sets up a Docker environment for Theano with NVIDIA CUDA and
-# Python 3.
+# python3-nn: Sets up a Docker environment with a slew of artificial neural
+# network libraries with NVIDIA CUDA and Python 3: Theano and TensorFlow.
 #
 
 # Base image is python-ml
-FROM aleksaro/python3-ml:8.0-cudnn5
+FROM aleksaro/python3-ml:8.0-cudnn5-ubuntu16.04
 
 
-MAINTAINER Aleksander Rognhaugen
+LABEL maintainer "Aleksander Rognhaugen"
+
+
+# Specify TensorFlow version
+ARG TF_VERSION=0.12.1
+
+
+# Install TensorFlow
+RUN pip3 install --upgrade \
+    https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-${TF_VERSION}-cp35-cp35m-linux_x86_64.whl
 
 
 # Install Theano

@@ -10,6 +10,14 @@ A compilation of Dockerfiles for personal use with automated builds enabled on
 mind. CUDA enabled images use the NVIDIA CUDA base image at `NVIDIA Docker`_.
 
 
+Notice
+======
+
+The Dockerfiles and associated images for ``aleksaro/python3-theano``,
+``aleksaro/python3-tf``, and ``aleksaro/python3-theano-tf`` has been
+deprecated in favour of ``aleksaro/python3-nn``.
+
+
 Usage
 =====
 
@@ -71,7 +79,7 @@ Dockerfiles. Below is an example of one such user-level Dockerfile containing
 
 .. code-block:: bash
 
-  FROM aleksaro/python3-theano-tf:8.0-cudnn5
+  FROM aleksaro/python3-nn:8.0-cudnn5-ubuntu16.04
 
   # Install Keras
   RUN pip3 install \

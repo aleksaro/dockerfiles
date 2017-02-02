@@ -3,14 +3,14 @@
 #
 
 # Base image is CUDA + cuDNN from nvidia-docker
-FROM nvidia/cuda:8.0-cudnn5-devel
+FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
 
 
-MAINTAINER Aleksander Rognhaugen
+LABEL maintainer "Aleksander Rognhaugen"
 
 
 # Install basic programs and dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         build-essential \
         byobu \
         cmake \
@@ -25,6 +25,7 @@ RUN apt-get update && apt-get install -y \
         rsync \
         unzip \
         wget
+
 
 # Cleanup apt-get
 RUN apt-get clean && \
