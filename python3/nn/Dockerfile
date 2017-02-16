@@ -10,13 +10,8 @@ FROM aleksaro/python3-ml:8.0-cudnn5-ubuntu16.04
 LABEL maintainer "Aleksander Rognhaugen"
 
 
-# Specify TensorFlow version
-ARG TF_VERSION=0.12.1
-
-
 # Install TensorFlow
-RUN pip3 install --upgrade \
-    https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-${TF_VERSION}-cp35-cp35m-linux_x86_64.whl
+RUN pip3 install --upgrade tensorflow-gpu
 
 
 # Install Theano
