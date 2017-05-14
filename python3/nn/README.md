@@ -11,8 +11,9 @@ The following boilerplate .theanorc is set up inside ``/root``:
 
 ```bash
 [global]
-device=gpu0
+device=cuda0
 floatX=float32
+optimizer_including=cudnn
 
 [dnn.conv]
 algo_fwd=time_once
