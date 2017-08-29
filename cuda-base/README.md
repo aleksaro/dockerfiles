@@ -3,7 +3,7 @@
 This Dockerfile uses the following base image by [NVIDIA Docker](https://github.com/NVIDIA/nvidia-docker):
 
 ```bash
-nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
+nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
 ```
 
 Below is a listing of the programs, libraries, and compilers are included in this Dockerfile:

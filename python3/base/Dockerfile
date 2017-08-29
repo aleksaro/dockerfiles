@@ -5,7 +5,7 @@
 #
 
 # Base image is cuda-base
-FROM aleksaro/cuda-base:8.0-cudnn5-ubuntu16.04
+FROM aleksaro/cuda-base:8.0-cudnn6-ubuntu16.04
 
 
 LABEL maintainer "Aleksander Rognhaugen"
@@ -51,6 +51,8 @@ RUN pip3 install --upgrade \
 RUN pip3 install \
     wheel \
     six \
+    Cython \
+    nose \
     ipython \
     jupyter \
     ipdb \

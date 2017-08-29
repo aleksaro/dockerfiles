@@ -13,9 +13,11 @@ mind. CUDA enabled images use the NVIDIA CUDA base image at `NVIDIA Docker`_.
 Notice
 ======
 
-The Dockerfiles and associated images for ``aleksaro/python3-theano``,
-``aleksaro/python3-tf``, and ``aleksaro/python3-theano-tf`` has been
-deprecated in favour of ``aleksaro/python3-nn``.
+The Dockerfiles and associated images for ``aleksaro/python2-base``,
+``aleksaro/python3-theano``, ``aleksaro/python3-tf``, ``aleksaro/python3-theano-tf``,
+and ``aleksaro/python3-nn`` have been deprecated in favour of ``aleksaro/python3-ml``.
+
+Theano is no longer installed by default.
 
 
 Usage
@@ -75,19 +77,15 @@ not contain all of the packages a regular user may want. To install any
 remaining packages, set up configuration files, expose ports, and so on, we
 recommend creating another Dockerfile on top of one of the more general
 Dockerfiles. Below is an example of one such user-level Dockerfile containing
-`Keras`_ and `Lasagne`_:
+`Keras`_:
 
 .. code-block:: bash
 
-  FROM aleksaro/python3-nn:8.0-cudnn5-ubuntu16.04
+  FROM aleksaro/python3-ml:8.0-cudnn6-ubuntu16.04
 
   # Install Keras
   RUN pip3 install \
       git+git://github.com/fchollet/keras.git@$master
-
-  # Install Lasagne
-  RUN pip3 install \
-      git+git://github.com/Lasagne/Lasagne.git@$master
 
   WORKDIR "/root"
   CMD ["/bin/bash"]
@@ -114,6 +112,5 @@ their GitHub page for a slew of general Dockerfiles.
 .. _NVIDIA Docker wiki: https://github.com/NVIDIA/nvidia-docker/wiki
 .. _shared volumes: https://docs.docker.com/engine/tutorials/dockervolumes/
 .. _Keras: https://github.com/fchollet/keras
-.. _Lasagne: https://github.com/Lasagne/Lasagne
 .. _senbon/user-dockerfiles: https://github.com/senbon/user-dockerfiles
 .. _Kaixhin: https://github.com/Kaixhin/dockerfiles

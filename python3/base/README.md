@@ -1,6 +1,6 @@
 # python3-base
 
-This Dockerfile uses the following base image ``aleksaro/cuda-base:8.0-cudnn5-ubuntu16.04``.
+This Dockerfile uses the following base image ``aleksaro/cuda-base:8.0-cudnn6-ubuntu16.04``.
 
 Below is a listing of the programs, libraries, and compilers are included in this Dockerfile:
 
@@ -26,6 +26,8 @@ Below is a listing of the programs, libraries, and compilers are included in thi
 |                                                               |                                                   |
 | [wheel](http://pythonwheels.com/)                             | A built-package format for Python                 |
 | [six](https://pypi.python.org/pypi/six)                       | Python 2 and 3 compatibility utilities            |
+| [Cython](http://cython.org/)                                  | C-Extensions for Python                           |
+| [nose](https://nose.readthedocs.io/en/latest/)                | An extension of unittest to make testing easier   |
 | [ipython](https://ipython.org/)                               | Interactive Python shell                          |
 | [jupyter](http://jupyter.org/)                                | Jupyter notebooks                                 |
 | [ipdb](https://github.com/gotcha/ipdb)                        | Python debugger for IPython                       |

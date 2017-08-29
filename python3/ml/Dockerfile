@@ -4,7 +4,7 @@
 #
 
 # Base image is python-base
-FROM aleksaro/python3-base:8.0-cudnn5-ubuntu16.04
+FROM aleksaro/python3-base:8.0-cudnn6-ubuntu16.04
 
 
 LABEL maintainer "Aleksander Rognhaugen"
@@ -27,6 +27,10 @@ RUN pip3 install \
     PyYAML \
     pandas \
     scikit-learn
+
+
+# Install TensorFlow
+RUN pip3 install --upgrade tensorflow-gpu
 
 
 # Set default working directory and image startup command
