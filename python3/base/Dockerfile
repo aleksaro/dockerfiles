@@ -58,6 +58,7 @@ RUN pip3 install \
     ipdb \
     numpy \
     Pillow \
+    imageio \
     scipy \
     matplotlib
 
