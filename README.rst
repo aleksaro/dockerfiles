@@ -81,7 +81,7 @@ Dockerfiles. Below is an example of one such user-level Dockerfile containing
 
 .. code-block:: bash
 
-  FROM aleksaro/python3-ml:8.0-cudnn6-ubuntu16.04
+  FROM aleksaro/python3-ml:9.0-cudnn7-ubuntu16.04
 
   # Install Keras
   RUN pip3 install \

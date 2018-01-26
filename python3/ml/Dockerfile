@@ -4,7 +4,7 @@
 #
 
 # Base image is python-base
-FROM aleksaro/python3-base:8.0-cudnn6-ubuntu16.04
+FROM aleksaro/python3-base:9.0-cudnn7-ubuntu16.04
 
 
 LABEL maintainer "Aleksander Rognhaugen"

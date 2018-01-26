@@ -3,7 +3,7 @@
 #
 
 # Base image is CUDA + cuDNN from nvidia-docker
-FROM nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
+FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 
 LABEL maintainer "Aleksander Rognhaugen"
@@ -31,7 +31,8 @@ RUN cd /root && \
     wget http://www.cmake.org/files/v3.9/cmake-3.9.1.tar.gz && \
     tar -xf cmake-3.9.1.tar.gz && cd cmake-3.9.1 && \
     ./bootstrap && \
-    make -j"$(nproc)" && make install
+    make -j"$(nproc)" && make install && \
+    rm -rf /root/cmake*
 
 
 # Cleanup apt-get

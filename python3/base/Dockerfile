@@ -5,8 +5,7 @@
 #
 
 # Base image is cuda-base
-FROM aleksaro/cuda-base:8.0-cudnn6-ubuntu16.04
-
+FROM aleksaro/cuda-base:9.0-cudnn7-ubuntu16.04
 
 LABEL maintainer "Aleksander Rognhaugen"
 
