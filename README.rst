@@ -1,29 +1,29 @@
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
-    :target: https://github.com/senbon/dockerfiles/blob/master/LICENSE
+    :target: https://github.com/aleksaro/dockerfiles/blob/master/LICENSE
 
 ===========
 dockerfiles
 ===========
 
 A compilation of Dockerfiles for personal use with automated builds enabled on
-`Docker Hub`_. Most of the images are made with machine learning on GPUs in
-mind. CUDA enabled images use the NVIDIA CUDA base image at `NVIDIA Docker`_.
+`Docker Hub`_. The images are made with machine learning on GPUs in mind. CUDA
+enabled images use the NVIDIA CUDA base image at `NVIDIA Docker`_.
 
 
 Notice
 ======
 
 The Dockerfiles and associated images for ``aleksaro/python2-base``,
-``aleksaro/python3-theano``, ``aleksaro/python3-tf``, ``aleksaro/python3-theano-tf``,
-and ``aleksaro/python3-nn`` have been deprecated in favour of ``aleksaro/python3-ml``.
-
-Theano is no longer installed by default.
+``aleksaro/python3-theano``, ``aleksaro/python3-tf``,
+``aleksaro/python3-theano-tf``, ``aleksaro/python3-nn``,
+``aleksaro/python3-ml``, and ``aleksaro/python3-base`` have been deprecated in
+favour of ``aleksaro/data-science``.
 
 
 Usage
 =====
 
-Before doing anything, make sure that you have `Docker`_ Engine and optionally
+Before doing anything, make sure that you have `Docker`_ Engine and
 `NVIDIA Docker`_ installed. Read more about Docker on the official
 `Docker Docs`_.
 
@@ -32,18 +32,21 @@ Automated builds
 ----------------
 
 With the automated builds enabled the simplest way to make use of these images
-is to run either the ``nvidia-docker run`` or ``docker run`` command. It is
-recommended to use ``nvidia-docker`` when working with GPUs because it
-simplifies the act of adding host GPU devices to the container. Running one of
+is to run the ``docker run --runtime=nvidia ...`` command. Running one of
 the images from Docker Hub and opening a terminal can be achieved by performing
 the following command:
 
 .. code-block:: bash
 
-  nvidia-docker run -it aleksaro/<image name[:tag]>
+  docker run --runtime=nvidia -it aleksaro/<image name[:tag]>
 
 When running multiple GPUs it might be useful to isolate the GPUs you want by
-using the environment variable ``NV_GPU``, e.g. ``NV_GPU=0 nvidia-docker ...``.
+using the environment variable ``NVIDIA_VISIBLE_DEVICES``. For example:
+
+.. code-block:: bash
+
+  docker run --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0 -it aleksaro/<image name[:tag]>
+
 More information about this and more can be found on the `NVIDIA Docker wiki`_.
 
 
@@ -69,38 +72,15 @@ Volumes are bound to the docker container using the ``-v`` option when running
 a Docker image. Read more about how to use `shared volumes`_ on the Docker Docs.
 
 
-What next?
-==========
-
-The Dockerfiles in this repository are sparse by design and will most likely
-not contain all of the packages a regular user may want. To install any
-remaining packages, set up configuration files, expose ports, and so on, we
-recommend creating another Dockerfile on top of one of the more general
-Dockerfiles. Below is an example of one such user-level Dockerfile containing
-`Keras`_:
-
-.. code-block:: bash
-
-  FROM aleksaro/python3-ml:9.0-cudnn7-ubuntu16.04
-
-  # Install Keras
-  RUN pip3 install \
-      git+git://github.com/fchollet/keras.git@$master
-
-  WORKDIR "/root"
-  CMD ["/bin/bash"]
-
-Depending on the situation, it may be appropriate to build these locally.
-
-Take a look at `senbon/user-dockerfiles`_ for more details on how to create
-user-level Dockerfiles.
-
-
 Acknowledgements
 ================
 
 The main inspiration for these Dockerfiles is `Kaixhin`_. Please have a look at
 their GitHub page for a slew of general Dockerfiles.
+
+Part of the code is borrowed from `Jupyter dockerstacks`_ (see
+``/base-notebook``). A copy of the relevant license can be found in the ``/3rd-part-licenses``
+directory.
 
 
 .. Links
@@ -110,7 +90,6 @@ their GitHub page for a slew of general Dockerfiles.
 .. _Docker: https://www.docker.com/
 .. _Docker Docs: https://docs.docker.com/
 .. _NVIDIA Docker wiki: https://github.com/NVIDIA/nvidia-docker/wiki
-.. _shared volumes: https://docs.docker.com/engine/tutorials/dockervolumes/
-.. _Keras: https://github.com/fchollet/keras
-.. _senbon/user-dockerfiles: https://github.com/senbon/user-dockerfiles
+.. _shared volumes: https://docs.docker.com/storage/volumes/
 .. _Kaixhin: https://github.com/Kaixhin/dockerfiles
+.. _Jupyter dockerstacks: https://github.com/jupyter/docker-stacks
