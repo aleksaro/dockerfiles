@@ -72,6 +72,17 @@ Volumes are bound to the docker container using the ``-v`` option when running
 a Docker image. Read more about how to use `shared volumes`_ on the Docker Docs.
 
 
+What next?
+==========
+
+The Dockerfiles in this repository can be run by issuing ``docker run`` commands
+as stated above, however, we recommend trying out `Docker Compose`_ for an easy
+way to set up containers.
+
+Information on how to set up the data science Dockerfiles in this repository
+with Docker Compose can be found at `aleksaro/user-dockerfiles`_.
+
+
 Acknowledgements
 ================
 
@@ -79,8 +90,8 @@ The main inspiration for these Dockerfiles is `Kaixhin`_. Please have a look at
 their GitHub page for a slew of general Dockerfiles.
 
 Part of the code is borrowed from `Jupyter dockerstacks`_ (see
-``/base-notebook``). A copy of the relevant license can be found in the ``/3rd-part-licenses``
-directory.
+``/base-notebook``). A copy of the relevant license can be found in the
+``/3rd-part-licenses`` directory.
 
 
 .. Links
@@ -91,5 +102,7 @@ directory.
 .. _Docker Docs: https://docs.docker.com/
 .. _NVIDIA Docker wiki: https://github.com/NVIDIA/nvidia-docker/wiki
 .. _shared volumes: https://docs.docker.com/storage/volumes/
+.. _Docker Compose: https://docs.docker.com/compose/
+.. _aleksaro/user-dockerfiles: https://github.com/aleksaro/user-dockerfiles
 .. _Kaixhin: https://github.com/Kaixhin/dockerfiles
 .. _Jupyter dockerstacks: https://github.com/jupyter/docker-stacks
