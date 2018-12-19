@@ -9,11 +9,6 @@ FROM nvidia/cuda:10.0-base-ubuntu18.04
 LABEL maintainer "Aleksander Rognhaugen"
 
 
-# Set NVIDIA environment variables
-ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
-
-
 # Install CUDA tools, various dependencies and programs
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
